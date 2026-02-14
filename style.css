@@ -1,0 +1,148 @@
+/* General Styling: */
+/* -------------------------------------------------- */
+
+* {
+  font-family: "SN Pro", sans-serif;
+  /* box-sizing: border-box; */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Header: */
+
+header {
+  position: relative;
+  text-align: center;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background-color: lightgray;
+  z-index: -1;
+  mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+}
+
+h1 {
+  margin: 0;
+  padding: 1rem;
+  font-size: 5rem;
+  display: inline-block;
+}
+
+nav {
+  padding-bottom: 1rem;
+}
+
+/* Main: */
+
+main {
+  min-height: 100vh;
+}
+
+/* Footer: */
+
+footer {
+  background-color: lightgray;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Class Styling: */
+/* -------------------------------------------------- */
+
+/* Navigation Button: */
+
+.nav-btn {
+  background-color: white;
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+  border: 0.125rem solid black;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.nav-btn:hover {
+  background-color: black;
+  color: white;
+}
+
+.nav-btn:active {
+  transition: none;
+  background-color: green;
+  border-color: green;
+}
+
+/* Circular Image */
+
+.img-circle {
+  mask-image: radial-gradient(circle closest-side, black 95%, transparent 100%);
+  /* -webkit-mask-image: radial-gradient(circle closest-side, black 95%, transparent 100%); */
+  /* padding: 1rem; */
+  margin: 1rem;
+}
+
+/* Rotating Text Section */
+
+.rotating-text {
+}
+
+.rotating-text-content {
+  position: relative;
+  display: inline-block;
+}
+
+.rotating-words span {
+  position: absolute;
+  animation: moveUpFade 8s linear infinite;
+}
+
+.rotating-words span:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.rotating-words span:nth-child(2) {
+  animation-delay: 2s;
+}
+
+.rotating-words span:nth-child(3) {
+  animation-delay: 4s;
+}
+
+.rotating-words span:nth-child(4) {
+  animation-delay: 6s;
+}
+
+@keyframes moveUpFade {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  10%,
+  30% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  40% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* ID Styling: */
+/* -------------------------------------------------- */
