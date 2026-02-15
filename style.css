@@ -3,7 +3,6 @@
 
 * {
   font-family: "SN Pro", sans-serif;
-  /* box-sizing: border-box; */
 }
 
 body {
@@ -47,10 +46,31 @@ main {
   min-height: 100vh;
 }
 
+h2 {
+  font-size: 2.5rem;
+}
+
+figure {
+  text-align: center;
+}
+
 /* Footer: */
 
 footer {
+  position: relative;
+  text-align: center;
+}
+
+footer::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
   background-color: lightgray;
+  mask-image: linear-gradient(to top, black 10%, transparent 100%);
+  z-index: -1;
 }
 
 footer p {
@@ -72,6 +92,7 @@ footer p {
   padding: 1rem;
   font-weight: 600;
   transition: 0.3s;
+  font-size: 1.5rem;
 }
 
 .nav-btn:hover {
@@ -89,60 +110,63 @@ footer p {
 
 .img-circle {
   mask-image: radial-gradient(circle closest-side, black 95%, transparent 100%);
-  /* -webkit-mask-image: radial-gradient(circle closest-side, black 95%, transparent 100%); */
-  /* padding: 1rem; */
   margin: 1rem;
 }
 
-/* Rotating Text Section */
+/* Skills Preview Section Classes */
 
-.rotating-text {
-}
-
-.rotating-text-content {
-  position: relative;
+.skills-list {
   display: inline-block;
+  font-size: 2.25rem;
 }
 
-.rotating-words span {
+/* Contact Info Table */
+
+.contact-info-table {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+  font-size: 1.5rem;
+}
+
+.contact-info-table::before {
+  content: "";
+  background-color: lightgray;
   position: absolute;
-  animation: moveUpFade 8s linear infinite;
+  left: 0;
+  right: 0;
+  height: 100%;
+  z-index: -1;
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 35%,
+    black 65%,
+    transparent 100%
+  );
+  padding: 4rem;
 }
 
-.rotating-words span:nth-child(1) {
-  animation-delay: 0s;
-}
-
-.rotating-words span:nth-child(2) {
-  animation-delay: 2s;
-}
-
-.rotating-words span:nth-child(3) {
-  animation-delay: 4s;
-}
-
-.rotating-words span:nth-child(4) {
-  animation-delay: 6s;
-}
-
-@keyframes moveUpFade {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  10%,
-  30% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  40% {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  100% {
-    opacity: 0;
-  }
+.contact-info-table .nav-btn {
+  margin: 2rem;
+  padding: 0.5rem;
 }
 
 /* ID Styling: */
 /* -------------------------------------------------- */
+
+/* Skills Preview Section */
+
+#skills-preview {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+/* Contact Info Section */
+
+#contact-info {
+  text-align: center;
+}
