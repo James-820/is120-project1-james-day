@@ -50,6 +50,11 @@ h2 {
   font-size: 2.5rem;
 }
 
+h3 {
+  font-size: 1.75rem;
+  font-weight: 500;
+}
+
 figure {
   text-align: center;
 }
@@ -154,6 +159,13 @@ footer p {
   padding: 0.5rem;
 }
 
+/* Skill Page Sections */
+
+.skill {
+  max-width: 75vw;
+  padding-bottom: 1rem;
+}
+
 /* ID Styling: */
 /* -------------------------------------------------- */
 
@@ -169,4 +181,10 @@ footer p {
 
 #contact-info {
   text-align: center;
+}
+
+#skills-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
